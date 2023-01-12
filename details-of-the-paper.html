@@ -231,8 +231,8 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 <ul>
 <li>Conduct counterfactual analysis to study the welfare consequences of reduced inertia in the following settings
 <ul>
-<li><strong>a “naive” setting</strong> where the price of insurance does not change as a consequence of incremental selection</li>
-<li><strong>a “sophisticated” setting</strong> where plan prices change to reflect the new risk profile of employees enrolled in the different options</li>
+<li>a <em>“naive”</em> setting where the price of insurance does not change as a consequence of incremental selection</li>
+<li>a <em>“sophisticated”</em> setting where plan prices change to reflect the new risk profile of employees enrolled in the different options</li>
 </ul></li>
 </ul>
 <div id="model-of-reduced-inertia-and-plan-pricing" class="section level3 hasAnchor" number="2.5.1">
@@ -267,9 +267,40 @@ TP^{y}_{jt} = AC_{\mathcal{K}^{y}_{j, t-1}} + L = \frac{1}{\|\mathcal{K}^{y}_{j,
 <h3><span class="header-section-number">2.5.2</span> Welfare<a href="details-of-the-paper.html#welfare" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>We analyze welfare using <strong>a certainty equivalent approach</strong> that equates the expected utility for each potential health plan option, <span class="math inline">\(U_{kjt}\)</span>, with a certain monetary payment <span class="math inline">\(Q\)</span></li>
+<li>Formally, the certainty equivalent <span class="math inline">\(Q_{kjt}\)</span> is determined for each family, plan, and time period by solving</li>
 </ul>
+<p><span class="math display">\[
+u(Q_{kjt}) = -\frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})} e^{\gamma_{k}(\mathbf{X}^{A}_{k})(W - Q_{kjt})} = U_{kjt}(P_{kjt}, Z\eta_{k}, 1_{kj, t-1})
+\]</span></p>
+<ul>
+<li>This welfare measure translates the expected utilities, which are subject to cardinal transformations, into values that can be interpreted in monetary terms<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+</ul>
+<ul>
+<li>Since our empirical choice framework does not distinguish between sources of inertia, we study a range of welfare results spanning the case where inertia is not incorporated into the welfare calculation at all to the case where it is fully incorporated as a tangible cost</li>
+<li>Formally, we calculate the certainty equivalent loss as a function of the proportion of the cost of inertia that enters the welfare calculation, denoted <span class="math inline">\(\kappa\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+u(Q^{\kappa}_{kjt}) = -\frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})} e^{\gamma_{k}(\mathbf{X}^{A}_{k})(W - Q^{\kappa}_{kjt})} = U_{kjt}(P_{kjt}, \kappa Z \eta_{k}, 1_{kj, t-1})
+\]</span>
+- We investigate the welfare consequences of policies that reduce inertia to <span class="math inline">\(Z\eta\)</span>, for <span class="math inline">\(\kappa\)</span> between zero and one
+- Conditional on <span class="math inline">\(\kappa\)</span>, the welfare impact for consumer <span class="math inline">\(k\)</span> of policies that reduce inertia to <span class="math inline">\(Z\eta_{k}\)</span> is</p>
+<p><span class="math display">\[
+\Delta CS^{Z}_{kjt} = (W - Q^{\kappa}_{k, jZ, t}) - (W - Q^{\kappa}_{kjt}) = Q^{\kappa}_{kjt} - Q^{\kappa}_{k, jZ, t}
+\]</span></p>
 </div>
 </div>
+</div>
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>確実性等価（Certainty Equivalent）は不確実性なOutcomeに対する期待効用と同等の効用をもたらす（確実な）金額。期待効用をそれに対応する金額（Monetary Value）で評価を行うことができるため、不確実性のあるマーケットの厚生評価に用いられる（Einav, Liran, Finkelstein and Cullen (2010)も参照。）。<a href="details-of-the-paper.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

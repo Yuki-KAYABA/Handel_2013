@@ -146,8 +146,8 @@ $$
 ## Counterfactual Simulations
 
 - Conduct counterfactual analysis to study the welfare consequences of reduced inertia in the following settings
-  - **a "naive" setting** where the price of insurance does not change as a consequence of incremental selection
-  - **a "sophisticated" setting** where plan prices change to reflect the new risk profile of employees enrolled in the different options
+  - a _"naive"_ setting where the price of insurance does not change as a consequence of incremental selection
+  - a _"sophisticated"_ setting where plan prices change to reflect the new risk profile of employees enrolled in the different options
 
 ### Model of Reduced Inertia and Plan Pricing
 
@@ -179,6 +179,35 @@ $$
 ### Welfare
 
 - We analyze welfare using **a certainty equivalent approach** that equates the expected utility for each potential health plan option, $U_{kjt}$, with a certain monetary payment $Q$
+- Formally, the certainty equivalent $Q_{kjt}$ is determined for each family, plan, and time period by solving
+
+$$
+u(Q_{kjt}) = -\frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})} e^{\gamma_{k}(\mathbf{X}^{A}_{k})(W - Q_{kjt})} = U_{kjt}(P_{kjt}, Z\eta_{k}, 1_{kj, t-1})
+$$
+
+- This welfare measure translates the expected utilities, which are subject to cardinal transformations, into values that can be interpreted in monetary terms[^1]
+
+[^1]:確実性等価（Certainty Equivalent）は不確実性なOutcomeに対する期待効用と同等の効用をもたらす（確実な）金額。期待効用をそれに対応する金額（Monetary Value）で評価を行うことができるため、不確実性のあるマーケットの厚生評価に用いられる（Einav, Liran, Finkelstein and Cullen (2010)も参照。）。
+
+- Since our empirical choice framework does not distinguish between sources of inertia, we study a range of welfare results spanning the case where inertia is not incorporated into the welfare calculation at all to the case where it is fully incorporated as a tangible cost
+- Formally, we calculate the certainty equivalent loss as a function of the proportion of the cost of inertia that enters the welfare calculation, denoted $\kappa$:
+
+$$
+u(Q^{\kappa}_{kjt}) = -\frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})} e^{\gamma_{k}(\mathbf{X}^{A}_{k})(W - Q^{\kappa}_{kjt})} = U_{kjt}(P_{kjt}, \kappa Z \eta_{k}, 1_{kj, t-1})
+$$
+- We investigate the welfare consequences of policies that reduce inertia to $Z\eta$, for $\kappa$ between zero and one
+- Conditional on $\kappa$, the welfare impact for consumer $k$ of policies that reduce inertia to $Z\eta_{k}$ is
+
+$$
+\Delta CS^{Z}_{kjt} = (W - Q^{\kappa}_{k, jZ, t}) - (W - Q^{\kappa}_{kjt}) = Q^{\kappa}_{kjt} - Q^{\kappa}_{k, jZ, t}
+$$
+
+
+
+
+
+
+
 
 
 
