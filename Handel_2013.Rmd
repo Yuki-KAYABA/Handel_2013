@@ -1,5 +1,5 @@
 ---
-title: "Handel (2013) Adverse Selection and Inertia in Health Insurance Markets: When Nudging Hurts"
+title: "Notes: Handel (2013) Adverse Selection and Inertia in Health Insurance Markets: When Nudging Hurts"
 author: "Yuki KAYABA"
 date: '2023-01-04'
 site: bookdown::bookdown_site
@@ -195,6 +195,7 @@ $$
 $$
 u(Q^{\kappa}_{kjt}) = -\frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})} e^{\gamma_{k}(\mathbf{X}^{A}_{k})(W - Q^{\kappa}_{kjt})} = U_{kjt}(P_{kjt}, \kappa Z \eta_{k}, 1_{kj, t-1})
 $$
+
 - We investigate the welfare consequences of policies that reduce inertia to $Z\eta$, for $\kappa$ between zero and one
 - Conditional on $\kappa$, the welfare impact for consumer $k$ of policies that reduce inertia to $Z\eta_{k}$ is
 
