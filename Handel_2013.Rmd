@@ -155,7 +155,7 @@ $$
 - The expected utility of family $k$ for plan $j$ at time $t$ is
 
 $$
-U_{kjt}(P_{kjt}, Z\eta_{k}, 1_{kj, t-1}) = \int^{\infty}_{0} f_{kjt}(OOP)u_{k}(OOP, \hat{P_{kjt}}, Z\eta_{k}, 1_{kj, t-1})dOOP,
+U_{kjt}(P_{kjt}, Z\eta_{k}, 1_{kj, t-1}) = \int^{\infty}_{0} f_{kjt}(OOP)u_{k}(OOP, \widehat{P_{kjt}}, Z\eta_{k}, 1_{kj, t-1})dOOP,
 $$
 
 - Next, we model insurance plan pricing, following the pricing rule used by the firm during the time period studied
@@ -173,7 +173,7 @@ $$
 - The family-plan-time specific out-of-pocket premium $\hat{P_{kjt}}$ from the choice model is
 
 $$
-\hat{P_{kjt}} = TP^{y}_{jt} - S(I_{k})TP^{y}_{PPO_{1200}t}
+\widehat{P_{kjt}} = TP^{y}_{jt} - S(I_{k})TP^{y}_{PPO_{1200}t}
 $$
 
 ### Welfare
@@ -187,7 +187,7 @@ $$
 
 - This welfare measure translates the expected utilities, which are subject to cardinal transformations, into values that can be interpreted in monetary terms[^1]
 
-[^1]:確実性等価（Certainty Equivalent）は不確実性なOutcomeに対する期待効用と同等の効用をもたらす（確実な）金額。期待効用をそれに対応する金額（Monetary Value）で評価を行うことができるため、不確実性のあるマーケットの厚生評価に用いられる（Einav, Liran, Finkelstein and Cullen (2010)も参照。）。
+[^1]:確実性等価（Certainty Equivalent）は不確実性なOutcomeに対する期待効用と同等の効用をもたらす（確実な）金額。期待効用をそれに対応する金額（Monetary Value）で評価を行うことができるため、不確実性のあるマーケットの厚生評価に用いられる（Einav, Finkelstein and Cullen (2010)も参照。）。
 
 - Since our empirical choice framework does not distinguish between sources of inertia, we study a range of welfare results spanning the case where inertia is not incorporated into the welfare calculation at all to the case where it is fully incorporated as a tangible cost
 - Formally, we calculate the certainty equivalent loss as a function of the proportion of the cost of inertia that enters the welfare calculation, denoted $\kappa$:
@@ -203,8 +203,12 @@ $$
 \Delta CS^{Z}_{kjt} = (W - Q^{\kappa}_{k, jZ, t}) - (W - Q^{\kappa}_{kjt}) = Q^{\kappa}_{kjt} - Q^{\kappa}_{k, jZ, t}
 $$
 
+- Since total premiums relate directly to average costs, the total welfare change differs from the consumer welfare only if the sum of employee contributions $P_{kjt}$ differs between policy $Z$ and the benchmark model
+- Given this, the mean per-family welfare change with inertia reduced to $Z\eta$ is
 
-
+$$
+\Delta TS^{Z}_{t} = \frac{1}{\|\mathcal{K}\|}\sum_{k \in \mathcal{K}}\Delta CS^{Z}_{kjt} + \frac{1}{\|\mathcal{K}\|}\sum_{k \in \mathcal{K}}(\widehat{P^{Z}_{kj, t}} - P_{kjt})
+$$
 
 
 
