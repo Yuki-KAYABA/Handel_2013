@@ -242,7 +242,7 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 <li>The expected utility of family <span class="math inline">\(k\)</span> for plan <span class="math inline">\(j\)</span> at time <span class="math inline">\(t\)</span> is</li>
 </ul>
 <p><span class="math display">\[
-U_{kjt}(P_{kjt}, Z\eta_{k}, 1_{kj, t-1}) = \int^{\infty}_{0} f_{kjt}(OOP)u_{k}(OOP, \hat{P_{kjt}}, Z\eta_{k}, 1_{kj, t-1})dOOP,
+U_{kjt}(P_{kjt}, Z\eta_{k}, 1_{kj, t-1}) = \int^{\infty}_{0} f_{kjt}(OOP)u_{k}(OOP, \widehat{P_{kjt}}, Z\eta_{k}, 1_{kj, t-1})dOOP,
 \]</span></p>
 <ul>
 <li>Next, we model insurance plan pricing, following the pricing rule used by the firm during the time period studied</li>
@@ -260,7 +260,7 @@ TP^{y}_{jt} = AC_{\mathcal{K}^{y}_{j, t-1}} + L = \frac{1}{\|\mathcal{K}^{y}_{j,
 <li>The family-plan-time specific out-of-pocket premium <span class="math inline">\(\hat{P_{kjt}}\)</span> from the choice model is</li>
 </ul>
 <p><span class="math display">\[
-\hat{P_{kjt}} = TP^{y}_{jt} - S(I_{k})TP^{y}_{PPO_{1200}t}
+\widehat{P_{kjt}} = TP^{y}_{jt} - S(I_{k})TP^{y}_{PPO_{1200}t}
 \]</span></p>
 </div>
 <div id="welfare" class="section level3 hasAnchor" number="2.5.2">
@@ -289,6 +289,13 @@ u(Q^{\kappa}_{kjt}) = -\frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})} e^{\gamma_{k}(\m
 <p><span class="math display">\[
 \Delta CS^{Z}_{kjt} = (W - Q^{\kappa}_{k, jZ, t}) - (W - Q^{\kappa}_{kjt}) = Q^{\kappa}_{kjt} - Q^{\kappa}_{k, jZ, t}
 \]</span></p>
+<ul>
+<li>Since total premiums relate directly to average costs, the total welfare change differs from the consumer welfare only if the sum of employee contributions <span class="math inline">\(P_{kjt}\)</span> differs between policy <span class="math inline">\(Z\)</span> and the benchmark model</li>
+<li>Given this, the mean per-family welfare change with inertia reduced to <span class="math inline">\(Z\eta\)</span> is</li>
+</ul>
+<p><span class="math display">\[
+\Delta TS^{Z}_{t} = \frac{1}{\|\mathcal{K}\|}\sum_{k \in \mathcal{K}}\Delta CS^{Z}_{kjt} + \frac{1}{\|\mathcal{K}\|}\sum_{k \in \mathcal{K}}(\widehat{P^{Z}_{kj, t}} - P_{kjt})
+\]</span></p>
 </div>
 </div>
 </div>
@@ -301,7 +308,7 @@ u(Q^{\kappa}_{kjt}) = -\frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})} e^{\gamma_{k}(\m
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>確実性等価（Certainty Equivalent）は不確実性なOutcomeに対する期待効用と同等の効用をもたらす（確実な）金額。期待効用をそれに対応する金額（Monetary Value）で評価を行うことができるため、不確実性のあるマーケットの厚生評価に用いられる（Einav, Liran, Finkelstein and Cullen (2010)も参照。）。<a href="details-of-the-paper.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>確実性等価（Certainty Equivalent）は不確実性なOutcomeに対する期待効用と同等の効用をもたらす（確実な）金額。期待効用をそれに対応する金額（Monetary Value）で評価を行うことができるため、不確実性のあるマーケットの厚生評価に用いられる（Einav, Finkelstein and Cullen (2010)も参照。）。<a href="details-of-the-paper.html#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
