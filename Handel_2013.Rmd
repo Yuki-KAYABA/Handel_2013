@@ -46,12 +46,12 @@ library(bookdown)
 
 Descriptive analysis to see the existence of inertia and adverse selection.
 
-1. New Employees
+1. Existence of Inertia 1: New Employees
 - Compare the choices over time of the cohorts of new enrollees from years $t_{−1}$, $t_{0}$, and $t_{1}$.
 - Results: while it is evident that the $t_{0}$ and $t_{−1}$ cohorts make very similar choices with the default option at $t_{1}$, the new enrollees making active choices in that year have a very different choice profile that reflects the price changes for $t_{1}$.
 
-2. Dominated Plan Choice
-- leverages a specific situation caused by the combination of plan characteristics and plan price changes in our setting. 
+2. Existence of Inertia 2: Dominated Plan Choice
+- Leverages a specific situation caused by the combination of plan characteristics and plan price changes in our setting. 
 - As a result of the large price changes for year $t_{1}$, $PPO_{250}$ became _strictly dominated_ for certain combinations of family size and income, which determine employee premium contributions.
 - Without inertia, employees must switch their options to monetary advantageous one.
 - Results show that only a fraction of employees change their insurance option.
@@ -210,9 +210,23 @@ $$
 \Delta TS^{Z}_{t} = \frac{1}{\|\mathcal{K}\|}\sum_{k \in \mathcal{K}}\Delta CS^{Z}_{kjt} + \frac{1}{\|\mathcal{K}\|}\sum_{k \in \mathcal{K}}(\widehat{P^{Z}_{kj, t}} - P_{kjt})
 $$
 
+### Results: No Plan Re-Pricing (The _Naive_ Case)
 
+- See Figure A-3 and Table A-6 in online Appendix
+- Since price is fixed, reduced inertia only leads to increased welfare
+- At $t_{1}$,
+  - $Z = 1$ (the benchmark model): 639 consumers choose $PPO_{500}$
+  - $Z = \frac{1}{2}$: 780 consumers choose $PPO_{500}$ (21 percent increase)
+  - $Z = \frac{1}{4}$: 913 consumers choose $PPO_{500}$ (44 percent increase)
+  - $Z = 0$: 1,052 consumers choose $PPO_{500}$ (65 percent increase)
+- Similar results At $t_{2}$
 
+### Results: Endogenous Plan Re-Pricing (The _Sophisticated_ Case)
 
+- See Figure 3, Table 6 (and Figure A-4 and Table A-7 in online Appendix)
+- With endogenous plan re-pricing, premiums change as consumers switch plans due to reduced inertia
+- Reduced inertia decreases $t_{6}$ enrollment in $PPO_{250}$ from 744 to 385 and increases enrollment in $PPO_{500}$ from 1,134 to 1,501, indicating that the improved choices over time substantially increase incremental adverse selection
+- The average cost of $PPO_{250}$ increases relative to $PPO_{500}$ with reduced inertia for all years from $t_{1}$ to $t_{6}$, with a maximum relative change of $4,619
 
 
 
